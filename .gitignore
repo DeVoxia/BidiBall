@@ -1,0 +1,12 @@
+@'
+.export/
+.import/
+mono/
+*.godot/editor/*
+.vscode/
+.idea/
+bin/
+release/
+dist/
+*.log
+'@ | Out-File -Encoding UTF8 .gitignore
