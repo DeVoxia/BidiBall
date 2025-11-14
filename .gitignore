@@ -1,14 +1,25 @@
-@'
+﻿# Godot generated / cache
 .export/
 .import/
+.godot/
+
+# Mono / C#
 mono/
-*.godot/editor/*
+.mono/
+
+# IDE / éditeurs
 .vscode/
 .idea/
+.vs/
+
+# Builds / binaires
 bin/
 release/
 dist/
-.godot/
-project.godot
+
+# Logs
 *.log
-'@ | Out-File -Encoding UTF8 .gitignore
+
+# OS files
+.DS_Store
+Thumbs.db
