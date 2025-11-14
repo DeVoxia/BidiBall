@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwhwhlqvub5yt"]
+
+[ext_resource type="Script" uid="uid://dppvffviq75j3" path="res://scripts/Game.gd" id="1_d73vv"]
+[ext_resource type="Script" uid="uid://dgk670mespvvu" path="res://scripts/Ball.gd" id="2_ja1hk"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_d73vv")
+
+[node name="Ball" type="RigidBody2D" parent="."]
+script = ExtResource("2_ja1hk")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]

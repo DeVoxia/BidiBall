@@ -1,18 +1,24 @@
-extends Node
-class_name Game
+extends Node2D
 
-signal score_changed(new_score: int)
+@onready var spawner := $Spawner
+@onready var ui := $UI
 
-var score: int = 0
+func _ready():
+    randomize()
 
-func set_score(value: int) -> void:
-	if score == value:
-		return
-	score = value
-	score_changed.emit(score)
+# Exemple de callback "bac" (connecte body_entered de chaque Sink* vers ces méthodes)
+func _on_SinkRed_body_entered(body):
+    if body.has_variable("ball_color"):
+        print("Red sink got:", body.ball_color)
 
-func add_score(delta: int) -> void:
-	set_score(score + delta)
+func _on_SinkGreen_body_entered(body):
+    if body.has_variable("ball_color"):
+        print("Green sink got:", body.ball_color)
 
-func reset_score() -> void:
-	set_score(0)
+func _on_SinkBlue_body_entered(body):
+    if body.has_variable("ball_color"):
+        print("Blue sink got:", body.ball_color)
+
+# Sera rempli à l'Étape 3
+func _reset_game():
+    pass
