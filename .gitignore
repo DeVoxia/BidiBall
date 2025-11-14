@@ -8,5 +8,7 @@ mono/
 bin/
 release/
 dist/
+.godot/
+project.godot
 *.log
 '@ | Out-File -Encoding UTF8 .gitignore
