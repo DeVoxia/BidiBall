@@ -1,0 +1,18 @@
+# Types de commits usuels (Conventional Commits) :
+# feat:      ajout d'une nouvelle fonctionnalité
+# fix:       correction de bug
+# chore:     maintenance / ménage / outils / scripts
+# refactor:  amélioration du code sans changement fonctionnel
+# docs:      documentation
+# style:     formatage, indentation
+# test:      tests
+# perf:      optimisation performance
+# build:     dépendances, compilation
+# ci:        scripts d'intégration continue
+
+<type>: <message court et clair>
+
+# Exemple :
+# feat: ajout du système de billes rouges
+# fix: correction collision bille / réservoir
+# chore: mise à jour scripts start/save
