@@ -78,11 +78,11 @@ if (Get-Command code -ErrorAction SilentlyContinue) {
 
 # --- 6) Godot ---
 if ($GodotExe -and (Test-Path $GodotExe)) {
-    Write-Host "Ouverture de Godot via GodotExe..."
-    Start-Process $GodotExe -ArgumentList "--path `"$ProjectPath`""
+    Write-Host "Ouverture de Godot via GodotExe (éditeur)..."
+    Start-Process $GodotExe -ArgumentList "--editor --path `"$ProjectPath`""
 } elseif (Get-Command godot -ErrorAction SilentlyContinue) {
-    Write-Host "Ouverture de Godot via la commande 'godot'..."
-    Start-Process godot -ArgumentList "--path `"$ProjectPath`""
+    Write-Host "Ouverture de Godot via la commande 'godot' (éditeur)..."
+    Start-Process godot -ArgumentList "--editor --path `"$ProjectPath`""
 } else {
     Write-Host "Godot non lancé : ni GodotExe défini, ni commande 'godot' disponible." -ForegroundColor Yellow
     Write-Host "  -> Soit ajoute Godot au PATH, soit crée un machine.local.ps1 avec la variable `$GodotExe." -ForegroundColor Yellow
