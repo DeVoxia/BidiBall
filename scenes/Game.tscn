@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dliny3yysuhxb"]
+[gd_scene load_steps=8 format=3 uid="uid://dliny3yysuhxb"]
 
 [ext_resource type="Script" uid="uid://dppvffviq75j3" path="res://scripts/Game.gd" id="1_qbsmt"]
 [ext_resource type="Script" uid="uid://dgk670mespvvu" path="res://scripts/Ball.gd" id="2_cpr0p"]
 [ext_resource type="Texture2D" uid="uid://dk0p20f060x4" path="res://art/balls/Ball.png" id="3_cpr0p"]
+[ext_resource type="Script" uid="uid://wwsgugplmjjk" path="res://scripts/Spawner.gd" id="4_s0nni"]
+[ext_resource type="Texture2D" uid="uid://dsjppit1tt2i0" path="res://art/spawner/Spawner.png" id="5_aug50"]
+[ext_resource type="PackedScene" uid="uid://cwhwhlqvub5yt" path="res://scenes/Ball.tscn" id="5_kiw3p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbsmt"]
 radius = 26.0
@@ -14,6 +17,8 @@ script = ExtResource("1_qbsmt")
 script = ExtResource("2_cpr0p")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ball"]
+position = Vector2(270, 16)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_cpr0p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
@@ -21,5 +26,15 @@ visible = false
 shape = SubResource("CircleShape2D_qbsmt")
 
 [node name="Spawner" type="Node2D" parent="."]
+position = Vector2(270, 30)
+script = ExtResource("4_s0nni")
+ball_scene = ExtResource("5_kiw3p")
 
-[node name="Sprite2D" type="Sprite2D" parent="Spawner"]
+[node name="Body" type="Sprite2D" parent="Spawner"]
+texture = ExtResource("5_aug50")
+
+[node name="DropPoint" type="Marker2D" parent="Spawner"]
+position = Vector2(0, 20)
+
+[node name="Timer" type="Timer" parent="Spawner"]
+autostart = true

@@ -14,6 +14,6 @@ func _apply_color():
         $"Sprite2D".modulate = map.get(ball_color, Color.WHITE)
 
 # un léger amorti pour éviter les rebonds sauvages
-func _integrate_forces(state):
+func _integrate_forces(_state):
     linear_damp = 0.2
     angular_damp = 0.2

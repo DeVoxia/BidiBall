@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var spawner := $Spawner
-@onready var ui := $UI
+# @onready var ui := $UI
 
 func _ready():
 	randomize()
