@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BidiBall"
-run/main_scene="uid://d15p8bjfj08un"
+run/main_scene="uid://dliny3yysuhxb"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

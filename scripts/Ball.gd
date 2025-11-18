@@ -1,5 +1,5 @@
 extends RigidBody2D
-@export var ball_color := "Red" # "Red" | "Green" | "Blue"
+@export var ball_color := "Green" # "Red" | "Green" | "Blue"
 
 func _ready():
     _apply_color()
