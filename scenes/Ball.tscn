@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwhwhlqvub5yt"]
+[gd_scene load_steps=5 format=3 uid="uid://cwhwhlqvub5yt"]
 
 [ext_resource type="Script" uid="uid://dppvffviq75j3" path="res://scripts/Game.gd" id="1_d73vv"]
 [ext_resource type="Script" uid="uid://dgk670mespvvu" path="res://scripts/Ball.gd" id="2_ja1hk"]
+[ext_resource type="Texture2D" uid="uid://dk0p20f060x4" path="res://art/balls/Ball.png" id="3_ul5l2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dqebh"]
+radius = 12.0415945
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_d73vv")
@@ -10,5 +14,8 @@ script = ExtResource("1_d73vv")
 script = ExtResource("2_ja1hk")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ball"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_ul5l2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource("CircleShape2D_dqebh")

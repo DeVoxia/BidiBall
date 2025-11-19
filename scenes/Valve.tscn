@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bonb4xh1lw4l1"]
+
+[ext_resource type="Script" uid="uid://cqhn2554bxcy2" path="res://scripts/Valve.gd" id="1_5bvgn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1u62l"]
+size = Vector2(80, 10)
+
+[sub_resource type="Texture2DRD" id="Texture2DRD_5bvgn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5bvgn"]
+size = Vector2(100, 30)
+
+[node name="Valve" type="Node2D"]
+script = ExtResource("1_5bvgn")
+
+[node name="Deflector" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deflector"]
+rotation = -0.7853982
+shape = SubResource("RectangleShape2D_1u62l")
+
+[node name="Sprite2D" type="Sprite2D" parent="Deflector"]
+scale = Vector2(33, 8)
+texture = SubResource("Texture2DRD_5bvgn")
+
+[node name="ClickZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickZone"]
+rotation = -0.7853982
+shape = SubResource("RectangleShape2D_5bvgn")

@@ -1,5 +1,0 @@
-ValveT (Node2D) [script ValveT.gd]
- ├─ ClickZone (Area2D) + CollisionShape2D   # zone cliquable/tap
- ├─ BlockLeft (StaticBody2D) + CollisionShape2D
- ├─ BlockRight (StaticBody2D) + CollisionShape2D
- └─ BlockStraight (StaticBody2D) + CollisionShape2D
