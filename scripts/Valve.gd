@@ -10,7 +10,7 @@ func _ready() -> void:
     if has_node("ClickZone"):
         $ClickZone.input_event.connect(_on_click_zone_input_event)
 
-func _on_click_zone_input_event(viewport, event, shape_idx) -> void:
+func _on_click_zone_input_event(_viewport, event, _shape_idx) -> void:
     if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
         _toggle()
 
